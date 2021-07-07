@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mini Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <h3 style="line-height: 3em;">FYP Groups</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Session</th>
+        <th scope="col">Team leader</th>
+        <th scope="col">Project title </th>
+        <th scope="col">Project Description</th>
+        <th scope="col">First Member </th>
+        <th scope="col">Second Member </th>
+        <th scope="col">Group Supervisor </th>
+        <th scope="col">Posting date </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for a in data%}
+      
+      <tr>
+        <th scope="row">{{count[loop.index-1]}}</th>
+        <th scope="row">{{a.sess}}</th>
+        <th scope="row">{{a.s_name}}</th>
+        <th scope="row">{{a.p_title}}</th>
+        <th scope="row">{{a.p_desc}}</th>
+        <th scope="row">{{a.p_ptnr1}}</th>
+        <th scope="row">{{a.p_ptnr2}}</th>
+        <th scope="row">{{a.p_sup}}</th>
+        <th scope="row">{{a.date}}</th>
+      </tr>
+     
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
